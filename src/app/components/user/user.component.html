@@ -1,15 +1,38 @@
 <h1>First User</h1>
 <div class="bg-light">
-<ol bg-dark>
-    <li>Name : {{name}}</li>
-    <li>Age: {{age}}</li>
-    <li>Mail:{{email}}</li>
-</ol>
-<ul>
+  <ol bg-dark>
+    <li>Name : {{ name }}</li>
+    <li>Age: {{ age }}</li>
+    <li>Mail:{{ email }}</li>
+  </ol>
+  <ul>
     <li><strong>Hobbies</strong></li>
-    <li>{{hobby.h_1}}</li>
-    <li>{{hobby.h_2}}</li>
-    <li>{{hobby.h_3}}</li>
-</ul>
+    <li>{{ hobby.h_1 }}</li>
+    <li>{{ hobby.h_2 }}</li>
+    <li>{{ hobby.h_3 }}</li>
+  </ul>
 </div>
-<button (onclick)="onClick()">More informations </button>
+<button type="button" class="bg-dark" (click)="Clicking($event)">
+  More informations
+</button>
+<h1>heditor</h1>
+<form action="">
+  <div>
+    <label for="name"><input type="text" [(ngModel)]="name"  name="name" />Name</label>
+  </div>
+  <div>
+    <label for="age"><input type="number" [(ngModel)]="age" name="age"/>Age</label>
+  </div>
+  <div>
+    <label for="mail"><input type="email" [(ngModel)]="email" name="email"/>Email</label>
+  </div>
+  <div>
+    <label for="hobby1"><input type="text"[(ngModel)]="hobby.h_1"name="hobby1" />hobby1</label>
+  </div>
+  <div>
+    <label for="hobby2"><input type="text" [(ngModel)]="hobby.h_2 "name="hobby2"/>hobby2</label>
+  </div>
+  <div>
+    <label for="hobby2"><input type="text"[(ngModel)]="hobby.h_3 "name="hobby3" />hobby3</label>
+  </div>
+</form>

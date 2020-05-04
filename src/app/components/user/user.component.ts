@@ -24,10 +24,10 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
-  onClick(){
-    alert("Bonjour le ga ");
+  Clicking($event){
+   console.log("Bonjour les amis");
+   alert("les enfants ca va ");
   }
 
 }
