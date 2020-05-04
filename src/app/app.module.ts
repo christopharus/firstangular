@@ -7,26 +7,23 @@ import { NgModule } from '@angular/core';
 
 // IMPORTING THE MAIN COMPONENT AND THE OTHER COMPONENTS
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
 
 import { DatasService } from './services/datas.service';
-import { TodoComponent } from './components/todo/todo/todo.component';
-import { TableComponent } from './components/table/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    TodoComponent,
-    TableComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [DatasService],
   bootstrap: [AppComponent]
