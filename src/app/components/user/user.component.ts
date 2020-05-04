@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatasService } from '../../services/datas.service';
 
 @Component({
   selector: 'app-user',
@@ -7,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  name:string;
-  email:string;
-  hobby:hobby;
-  age:number;
-  constructor() {
-    this.name="Armel";
-    this.age=24;
-    this.email="armelzong@gmail.com";
-    this.hobby={
-      h_1:"musique",
-      h_2:"basket",
-      h_3:"coding"
+  name: string;
+  email: string;
+  hobby: Hobby;
+  age: number;
+  constructor( private data: DatasService ) {
+    this.name = 'Armel';
+    this.age = 24;
+    this.email = 'armelzong@gmail.com';
+    this.hobby = {
+      h_1: 'musique',
+      h_2: 'basket',
+      h_3: 'coding'
     };
 
   }
@@ -26,13 +27,13 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
   Clicking($event){
-   console.log("Bonjour les amis");
-   alert("les enfants ca va ");
+   console.log('Bonjour les amis');
+   alert('les enfants ca va ');
   }
 
 }
-interface hobby{
-  h_1:string;
-  h_2:string;
-  h_3:string;
+interface Hobby {
+  h_1: string;
+  h_2: string;
+  h_3: string;
 }
