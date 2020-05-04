@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 // IMPORTING THE MAIN COMPONENT AND THE OTHER COMPONENTS
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
@@ -11,6 +12,8 @@ import { UserComponent } from './components/user/user.component';
 import { DatasService } from './services/datas.service';
 import { TodoComponent } from './components/todo/todo/todo.component';
 import { TableComponent } from './components/table/table/table.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import { TableComponent } from './components/table/table/table.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [DatasService],
   bootstrap: [AppComponent]
